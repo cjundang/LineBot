@@ -19,13 +19,13 @@ if (!is_null($events['events'])) {
 			// Build message to reply back
 			$messages = [
 				'type' => 'text',
-				'text' => "I don't understand";
+				'text' => "I don't understand"
 			];
 
 			if($text == "Hi"){
 				$messages = [
 					'type' => 'text',
-					'text' => "Hello";
+					'text' => "Hello"
 				];
 			}
 
