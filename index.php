@@ -19,8 +19,15 @@ if (!is_null($events['events'])) {
 			// Build message to reply back
 			$messages = [
 				'type' => 'text',
-				'text' => $text
+				'text' => "I don't understand";
 			];
+
+			if($text == "Hi"){
+				$messages = [
+					'type' => 'text',
+					'text' => "Hello";
+				];
+			}
 
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
