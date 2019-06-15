@@ -10,9 +10,15 @@
 	$replyToken = $deCode['events'][0]['replyToken'];
 	$recv_msg = $deCode['events'][0]['message']['text'];
 
+	$rep_msg = "I don't know what you say";
+	if($recv_msg == "Toi") 
+		$rep_msg = "OK, Hello Toi";
+
+
+
 	$messages = [];
 	$messages['replyToken'] = $replyToken;
-	$messages['messages'][0] = getFormatTextMessage("เอ้ย ถามอะไรก็ตอบได้ " . $recv_msg);
+	$messages['messages'][0] = getFormatTextMessage($rep_msg);
 
 	$encodeJson = json_encode($messages);
 
